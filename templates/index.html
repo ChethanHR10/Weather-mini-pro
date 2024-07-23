@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather and Travel Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather and Travel Info</h1>
+
+        <div class="grid-container">
+            <div id="weather-info" class="weather-info"></div>
+            <div id="travel-weather-info" class="weather-info"></div>
+            <div id="activities" class="activities-info"></div>
+        </div>
+
+        <div class="input-section">
+            <label for="location">Enter Location for Weather:</label>
+            <input type="text" id="location" placeholder="e.g. Mysore">
+            <button onclick="getWeather()">Get Weather</button>
+        </div>
+
+        <div class="input-section">
+            <h2>Suggested Activities</h2>
+            <button onclick="getActivities()">click</button>
+        </div>
+
+        <div class="input-section">
+            <h2>Travel Weather</h2>
+            <label for="start">Start Location:</label>
+            <input type="text" id="start" placeholder="e.g. Mysore">
+            <label for="end">End Location:</label>
+            <input type="text" id="end" placeholder="e.g. Mandya">
+            <button onclick="getTravelWeather()">Get Travel Weather</button>
+        </div>
+
+        <div class="error" id="error"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
