@@ -7,8 +7,8 @@ app = Flask(__name__)
 
 logging.basicConfig(level=logging.DEBUG)
 
-OPENWEATHER_API_KEY = '0695557b8df808d85e56f3b4f24c15f8'
-GOOGLE_MAPS_API_KEY = 'AIzaSyCt_OIjEj7jUZKPl7gjJVMyh8HOwn0oPWQ'
+OPENWEATHER_API_KEY = 'add you open weather api key'
+GOOGLE_MAPS_API_KEY = 'add you google api key'
 gmaps = googlemaps.Client(key=GOOGLE_MAPS_API_KEY)
 
 def get_weather(city_name):
