@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather and Travel Info</title>
+    <title>Travel-Weather-buddy</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <div class="container">
-        <h1>Weather and Travel Info</h1>
-
+        <h1>Travel-Weather-buddy</h1>
+        <h4>Team Mavrick</h4>
         <div class="grid-container">
             <div id="weather-info" class="weather-info"></div>
             <div id="travel-weather-info" class="weather-info"></div>
@@ -17,22 +19,22 @@
         </div>
 
         <div class="input-section">
-            <label for="location">Enter Location for Weather:</label>
-            <input type="text" id="location" placeholder="e.g. Mysore">
+            <label for="location">Enter Location :</label>
+            <input type="text" id="location" placeholder="City">
             <button onclick="getWeather()">Get Weather</button>
         </div>
 
         <div class="input-section">
             <h2>Suggested Activities</h2>
-            <button onclick="getActivities()">click</button>
+            <button onclick="getActivities()">Click</button>
         </div>
 
         <div class="input-section">
-            <h2>Travel Weather</h2>
-            <label for="start">Start Location:</label>
-            <input type="text" id="start" placeholder="e.g. Mysore">
-            <label for="end">End Location:</label>
-            <input type="text" id="end" placeholder="e.g. Mandya">
+            <h2>Route along its weather</h2>
+            <label for="start">Source Location:</label>
+            <input type="text" id="start" placeholder="City-1">
+            <label for="end">Destination Location:</label>
+            <input type="text" id="end" placeholder="City-2">
             <button onclick="getTravelWeather()">Get Travel Weather</button>
         </div>
 
@@ -41,4 +43,5 @@
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
+
 </html>
